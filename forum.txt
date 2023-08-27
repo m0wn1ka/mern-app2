@@ -1,0 +1,15 @@
+frontend:
+===dashboard
+just hi
+view post button
+====saysomething component
+form to send data
+onsubmit:
+post request
+redirect to dashboard
+====see forum
+a component with post request to formum data
+================================
+backend:
+gett request can be to forum
+post request can be to speech(use_id,sayings)
