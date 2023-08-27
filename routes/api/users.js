@@ -1,5 +1,7 @@
 const express=require('express')
 const router=express.Router();
+const { ObjectId } = require('mongodb');
+
 const jwt=require('jsonwebtoken')
 const data=require("../../config/default")
 const secret=data.secret
@@ -28,8 +30,9 @@ router.post('/',[
         if(user){
                 res.status(400).json({errors:[{msg:"user already exit"}]})
         }
+        const objectId = new ObjectId();
         user=new User({
-            name,email,password
+            _id: objectId,name,email,password
         }) ;
         const salt= await bcrypt.genSalt(10);
         user.password=await bcrypt.hash(password,salt);
