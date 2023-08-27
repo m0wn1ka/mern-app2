@@ -21,7 +21,11 @@ return(
           <ProtectedRoute>
           <Landing />
           </ProtectedRoute>} />
-          <Route  path="post" element={<SaySomething/>}/>
+          
+          <Route  path="post" element={
+          <ProtectedRoute>
+          <SaySomething/>
+          </ProtectedRoute>}/>
           <Route path="register" element={<Register />} />
           <Route path="seeposts" element={<SeePosts/>}/>
           <Route path='login' element={<Login/>}/>
