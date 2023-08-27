@@ -7,6 +7,7 @@ import { Provider } from 'react-redux'
 import './App.css';
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
+import SeePosts from './components/layouts/SeePosts'
 import ProtectedRoute from './utils/protectedRoute';
 import SaySomething from './components/layouts/SaySomething';
 const App = () => {
@@ -22,6 +23,7 @@ return(
           </ProtectedRoute>} />
           <Route  path="post" element={<SaySomething/>}/>
           <Route path="register" element={<Register />} />
+          <Route path="seeposts" element={<SeePosts/>}/>
           <Route path='login' element={<Login/>}/>
         </Routes>
       </Router>

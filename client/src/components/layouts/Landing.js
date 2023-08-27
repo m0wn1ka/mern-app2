@@ -10,15 +10,22 @@ const Landing = () => {
     const handlePost=()=>{
         setPost(true)
     }
-    const onSubmit=(e)=>{
+    const onSubmit1=(e)=>{
         navigate('/post')
+    }
+    const onSubmit2=(e)=>{
+        navigate('/seeposts')
     }
     return (
     <nav>
-        {/* <button onClick={handlePost}>post something</button> */}
-        <form onSubmit={e=>onSubmit(e)}>
+        
+        <form onSubmit={e=>onSubmit1(e)}>
         <input type="submit" value="post"/>
         </form>
+        <form onSubmit={e=>onSubmit2(e)}>
+        <input type="submit" value="seeposts"/>
+        </form>
+
        
        
         hi the landing page
